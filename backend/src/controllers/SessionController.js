@@ -12,6 +12,6 @@ module.exports = {
       return res.status(400).json({ error: "ONG does not exist" });
     }
 
-    return res.json({ ongExist });
+    return res.json(ongExist);
   }
 };

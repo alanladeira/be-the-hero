@@ -2,8 +2,9 @@ const connection = require("../database/connection");
 
 module.exports = {
   async store(req, res) {
-    const { title, description, value } = req.body;
     const ong_id = req.headers.authorization;
+
+    const { title, description, value } = req.body;
 
     const [id] = await connection("incidents").insert({
       title,
